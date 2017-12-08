@@ -17,5 +17,20 @@
 
   <!-- Main Content -->
   <div class="container">
+    <%= form_tag "/yelps", method: :get do %>
+      <div>
+          <%= label_tag :location %>
+          <%= text_field_tag :location %>
+      </div>
+
+      <div>
+          <%= label_tag :location %>
+          <%= text_field_tag :location %>
+      </div>      
+
+      <div>
+        <%= submit_tag "submit" %>
+      </div>
+    <% end %>
     <%=@response.body%>
   </div>
