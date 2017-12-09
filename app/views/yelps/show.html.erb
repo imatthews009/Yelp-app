@@ -1,17 +1,16 @@
-<% restaurant = @response.body["businesses"].sample(1)%>
-<header class="masthead" style="background-image: url('<%=restaurant[0]["image_url"]%>')">
+<header class="masthead" style="background-image: url('<%=@restaurant[0]["image_url"]%>')">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1><%= restaurant[0]["name"]%> </h1>
+          <h1><%= @restaurant[0]["name"]%> </h1>
         </div>
       </div>
     </div>
   </div>
 </header>
-<h1>Address: <%= restaurant[0]["location"]["display_address"].join(" ")%> </h1>
-<h1>Phone Number: <%= restaurant[0]["display_phone"]%> </h1>
-<h1>Rating: <%= restaurant[0]["rating"]%> </h1>
+<h1>Address: <%= @restaurant[0]["location"]["display_address"].join(" ")%> </h1>
+<h1>Phone Number: <%= @restaurant[0]["display_phone"]%> </h1>
+<h1>Rating: <%= @restaurant[0]["rating"]%> </h1>
 
