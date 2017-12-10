@@ -9,10 +9,17 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+
   </head>
 
   <body>
+    <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+                <%= value %>
+          </div>
+    <% end %>   
     <%= yield %>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
