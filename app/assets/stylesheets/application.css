@@ -91,7 +91,7 @@ header.masthead {
   margin: 30px auto;
 }
 
-.masthead {
+.masthead, .container, .masthead .container div {
   height: 300px;
 }
 
