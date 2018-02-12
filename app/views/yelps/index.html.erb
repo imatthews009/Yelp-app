@@ -17,170 +17,179 @@
   <!-- Main Content -->
   <div class="container">
     <%= form_tag "/yelps/show", method: :post do %>
-      <h1>Location</h1>
-      <div>
-          <%= label_tag "Location (Zip, Address, or City)" %>
-          <%= text_field_tag :location %>
-      </div>  
-      <h1>Distance</h1>
-      <div class="radius_buttons">
-        <div class="radio checkbox-inline">
-          <%= label_tag "4 blocks" %>
-          <%= radio_button_tag :radius, 322 %>
+
+      <div class="location">
+        <h1>Location</h1>
+        <div>
+            <%= label_tag "Location (Zip, Address, or City)" %>
+            <%= text_field_tag :location %>
         </div>  
+      </div>
 
-        <div class="radio checkbox-inline">
-          <%= label_tag "walking (1 mi.)" %>
-          <%= radio_button_tag :radius, 1610 %>
-        </div>    
+      <div class="distance">
+        <h1>Distance</h1>
+        <div class="radius_buttons">
+          <div class="radio checkbox-inline">
+            <%= label_tag "4 blocks" %>
+            <%= radio_button_tag :radius, 322 %>
+          </div>  
 
-        <div class="radio checkbox-inline">
-          <%= label_tag "Biking (2 mi.)" %>
-          <%= radio_button_tag :radius, 3220 %>
+          <div class="radio checkbox-inline">
+            <%= label_tag "walking (1 mi.)" %>
+            <%= radio_button_tag :radius, 1610 %>
+          </div>    
+
+          <div class="radio checkbox-inline">
+            <%= label_tag "Biking (2 mi.)" %>
+            <%= radio_button_tag :radius, 3220 %>
+          </div>  
+
+          <div class="radio checkbox-inline">
+            <%= label_tag "Driving (5 mi.)" %>
+            <%= radio_button_tag :radius, 8050 %>
+          </div> 
         </div>  
+      </div> 
 
-        <div class="radio checkbox-inline">
-          <%= label_tag "Driving (5 mi.)" %>
-          <%= radio_button_tag :radius, 8050 %>
-        </div> 
-      </div>   
-      <h1>Categories</h1>
-      <div class="categories_buttons">
-        <div class="row">
-          <div class="radio col-lg 2">
-            <%= label_tag "American (New)" %>
-            <%= radio_button_tag :categories, "newamerican" %>
-          </div>  
+      <div class="categories">
+        <h1>Categories</h1>
+        <div class="categories_buttons">
+          <div class="row">
+            <div class="radio col-lg 2">
+              <%= label_tag "American (New)" %>
+              <%= radio_button_tag :categories, "newamerican" %>
+            </div>  
 
-          <div class="radio col-lg 2">
-            <%= label_tag "American (Traditional)" %>
-            <%= radio_button_tag :categories, "tradamerican" %>
-          </div>    
+            <div class="radio col-lg 2">
+              <%= label_tag "American (Traditional)" %>
+              <%= radio_button_tag :categories, "tradamerican" %>
+            </div>    
 
-          <div class="radio col-lg 2">
-            <%= label_tag "Asian Fusion" %>
-            <%= radio_button_tag :categories, "asianfusion" %>
-          </div>  
+            <div class="radio col-lg 2">
+              <%= label_tag "Asian Fusion" %>
+              <%= radio_button_tag :categories, "asianfusion" %>
+            </div>  
 
-          <div class="radio col-lg 2">
-            <%= label_tag "Dinner Theater" %>
-            <%= radio_button_tag :categories, "dinnertheater" %>
-          </div> 
+            <div class="radio col-lg 2">
+              <%= label_tag "Dinner Theater" %>
+              <%= radio_button_tag :categories, "dinnertheater" %>
+            </div> 
 
-          <div class="radio col-lg 2">
-            <%= label_tag "Breakfast & Brunch" %>
-            <%= radio_button_tag :categories, "breakfast_brunch" %>
-          </div> 
-        </div>
-
-        <div class="row">
-          <div class="radio col-lg 2 ">
-            <%= label_tag "Burgers" %>
-            <%= radio_button_tag :categories, "burgers" %>
-          </div>  
-
-          <div class="radio col-lg 2 ">
-            <%= label_tag "Cajun/Creole" %>
-            <%= radio_button_tag :categories, "cajun" %>
-          </div>    
-
-          <div class="radio col-lg 2 ">
-            <%= label_tag "Catalan" %>
-            <%= radio_button_tag :categories, "catalan" %>
-          </div>  
-
-          <div class="radio col-lg 2 ">
-            <%= label_tag "Chinese" %>
-            <%= radio_button_tag :categories, "chinese" %>
-          </div> 
-
-          <div class="radio col-lg 2 ">
-            <%= label_tag "Delis" %>
-            <%= radio_button_tag :categories, "delis" %>
-          </div> 
-        </div>
-        
-        <div class="row">
-          <div class="radio col-lg 2">
-            <%= label_tag "Diners" %>
-            <%= radio_button_tag :categories, "diners" %>
-          </div>  
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Fondue" %>
-            <%= radio_button_tag :categories, "fondue" %>
-          </div>    
-
-          <div class="radio col-lg 2">
-            <%= label_tag "French" %>
-            <%= radio_button_tag :categories, "french" %>
-          </div>  
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Indian" %>
-            <%= radio_button_tag :categories, "indpak" %>
-          </div> 
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Irish" %>
-            <%= radio_button_tag :categories, "irish" %>
-          </div>  
-        </div>
-
-        <div class="row">
-          <div class="radio col-lg 2">
-            <%= label_tag "Italian" %>
-            <%= radio_button_tag :categories, "italian" %>
-          </div>    
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Japanese" %>
-            <%= radio_button_tag :categories, "japanese" %>
-          </div>  
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Mexican" %>
-            <%= radio_button_tag :categories, "mexican" %>
-          </div> 
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Pizza" %>
-            <%= radio_button_tag :categories, "pizza" %>
-          </div> 
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Seafood" %>
-            <%= radio_button_tag :categories, "seafood" %>
-          </div>  
-        </div>
-        <div class="row">
-          <div class="radio col-lg 2">
-            <%= label_tag "Spanish" %>
-            <%= radio_button_tag :categories, "spanish" %>
-          </div>    
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Sushi" %>
-            <%= radio_button_tag :categories, "sushi" %>
-          </div>  
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Tapas" %>
-            <%= radio_button_tag :categories, "tapasmallplates" %>
-          </div> 
-
-          <div class="radio col-lg 2">
-            <%= label_tag "Thai" %>
-            <%= radio_button_tag :categories, "thai" %>
-          </div>          
-          <div class="radio col-lg 2">
-            <%= label_tag "Steakhouse" %>
-            <%= radio_button_tag :categories, "steak" %>
+            <div class="radio col-lg 2">
+              <%= label_tag "Breakfast & Brunch" %>
+              <%= radio_button_tag :categories, "breakfast_brunch" %>
+            </div> 
           </div>
-        </div>
-      </div>                      
 
-      <div>
+          <div class="row">
+            <div class="radio col-lg 2 ">
+              <%= label_tag "Burgers" %>
+              <%= radio_button_tag :categories, "burgers" %>
+            </div>  
+
+            <div class="radio col-lg 2 ">
+              <%= label_tag "Cajun/Creole" %>
+              <%= radio_button_tag :categories, "cajun" %>
+            </div>    
+
+            <div class="radio col-lg 2 ">
+              <%= label_tag "Catalan" %>
+              <%= radio_button_tag :categories, "catalan" %>
+            </div>  
+
+            <div class="radio col-lg 2 ">
+              <%= label_tag "Chinese" %>
+              <%= radio_button_tag :categories, "chinese" %>
+            </div> 
+
+            <div class="radio col-lg 2 ">
+              <%= label_tag "Delis" %>
+              <%= radio_button_tag :categories, "delis" %>
+            </div> 
+          </div>
+          
+          <div class="row">
+            <div class="radio col-lg 2">
+              <%= label_tag "Diners" %>
+              <%= radio_button_tag :categories, "diners" %>
+            </div>  
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Fondue" %>
+              <%= radio_button_tag :categories, "fondue" %>
+            </div>    
+
+            <div class="radio col-lg 2">
+              <%= label_tag "French" %>
+              <%= radio_button_tag :categories, "french" %>
+            </div>  
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Indian" %>
+              <%= radio_button_tag :categories, "indpak" %>
+            </div> 
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Irish" %>
+              <%= radio_button_tag :categories, "irish" %>
+            </div>  
+          </div>
+
+          <div class="row">
+            <div class="radio col-lg 2">
+              <%= label_tag "Italian" %>
+              <%= radio_button_tag :categories, "italian" %>
+            </div>    
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Japanese" %>
+              <%= radio_button_tag :categories, "japanese" %>
+            </div>  
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Mexican" %>
+              <%= radio_button_tag :categories, "mexican" %>
+            </div> 
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Pizza" %>
+              <%= radio_button_tag :categories, "pizza" %>
+            </div> 
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Seafood" %>
+              <%= radio_button_tag :categories, "seafood" %>
+            </div>  
+          </div>
+          <div class="row">
+            <div class="radio col-lg 2">
+              <%= label_tag "Spanish" %>
+              <%= radio_button_tag :categories, "spanish" %>
+            </div>    
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Sushi" %>
+              <%= radio_button_tag :categories, "sushi" %>
+            </div>  
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Tapas" %>
+              <%= radio_button_tag :categories, "tapasmallplates" %>
+            </div> 
+
+            <div class="radio col-lg 2">
+              <%= label_tag "Thai" %>
+              <%= radio_button_tag :categories, "thai" %>
+            </div>          
+            <div class="radio col-lg 2">
+              <%= label_tag "Steakhouse" %>
+              <%= radio_button_tag :categories, "steak" %>
+            </div>
+          </div>
+        </div>   
+      </div>                   
+
+      <div class='submit'>
         <%= submit_tag "submit" %>
       </div>
     <% end %>

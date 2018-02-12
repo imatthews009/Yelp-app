@@ -1,6 +1,6 @@
 
 header.masthead {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
     background: no-repeat center center;
     background-color: #868e96;
     background-attachment: scroll;
@@ -69,4 +69,30 @@ header.masthead {
         font-size: 55px; }
       header.masthead .post-heading .subheading {
         font-size: 30px; } }
+
+.location, .distance, .categories, .detail {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 1px 3px;
+  margin-bottom: 20px;
+}
+
+.submit {
+  margin-bottom: 20px;
+}
+
+#map {
+  margin-bottom: 20px;
+}
+
+.detail {
+  text-align: center;
+  width: 70%;
+  margin: 30px auto;
+}
+
+.masthead {
+  height: 300px;
+}
+
 

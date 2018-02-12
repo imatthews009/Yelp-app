@@ -9,6 +9,8 @@ class YelpsController < ApplicationController
                     headers:{ Authorization: "Bearer #{ENV["yelp_api_key"]}"},
                     parameters:{location: params[:location], term: "food", limit: 10, radius: params[:radius], categories: params[:categories]}
           @restaurant = response.body["businesses"].sample(1) 
+ 
+          
           if @restaurant != []        
             render "show.html.erb"
           else
